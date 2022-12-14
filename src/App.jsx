@@ -58,7 +58,7 @@ function App() {
           : null}
       </p>
       {storedData !== [] ? (
-        <div className="grid grid-cols-3 gap-4 divide-y">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 divide-y">
           {filter != ""
             ? filter.map((entry, index) => (
                 <div
