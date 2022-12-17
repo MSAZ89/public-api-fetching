@@ -30,7 +30,7 @@ function App() {
       <h1 className="my-8 pb-4 text-center mx-auto text-2xl">
         Public API List
       </h1>
-      <div className="flex flex-wrap gap-2 mb-8">
+      <div className="flex flex-wrap gap-2 mb-8 justify-center items-center">
         <button
           className="bg-slate-700 transition-all text-white p-1 rounded text-sm border-2 border-slate-700"
           onClick={() => updateFilter("")}
@@ -50,8 +50,8 @@ function App() {
                 <button
                   className={
                     active === index
-                      ? "bg-slate-100 transition-all text-black font-semibold p-1 rounded border-2 border-slate-300"
-                      : "bg-slate-700 transition-all text-white p-1 rounded text-sm border-2 border-slate-700"
+                      ? "bg-slate-100 transition-all text-black p-1 rounded border border-slate-500"
+                      : "bg-slate-700 transition-all text-white p-1 rounded border border-slate-700"
                   }
                   key={index}
                   onClick={() => updateFilter(entry, index)}
