@@ -67,7 +67,7 @@ function App() {
                 >
                   <p className="text-xl font-bold mb-2">{entry.API}</p>
                   <a
-                    className="tracking-tight text-slate-400 hover:text-slate-300 transition-all"
+                    className="tracking-tight text-slate-400 hover:text-slate-300 transition-all break-words"
                     target={"_blank"}
                     rel="noreferrer"
                     href={entry.Link}
