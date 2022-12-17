@@ -31,12 +31,6 @@ function App() {
         Public API List
       </h1>
       <div className="flex flex-wrap gap-2 mb-8 justify-center items-center">
-        <button
-          className="bg-slate-700 transition-all text-white p-1 rounded text-sm border-2 border-slate-700"
-          onClick={() => updateFilter("")}
-        >
-          Clear
-        </button>
         {/*Filters*/}
         <>
           {
