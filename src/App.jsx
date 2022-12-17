@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function App() {
   //fetch data from api and set it to data
@@ -10,6 +10,7 @@ function App() {
 
   const [storedData, setStoredData] = useState([]);
   const [filterName, setFilterName] = useState("");
+  const [active, setActive] = useState("");
 
   const filter = storedData.filter((entry) => {
     return entry.Category === filterName;
@@ -19,6 +20,11 @@ function App() {
     fetchData();
   }, []);
 
+  const updateFilter = (filterName, buttonIndex) => {
+    setFilterName(filterName);
+    setActive(buttonIndex);
+  };
+
   return (
     <div className="p-4">
       <h1 className="my-8 pb-4 text-center mx-auto text-2xl">
@@ -26,8 +32,8 @@ function App() {
       </h1>
       <div className="flex flex-wrap gap-2 mb-8">
         <button
-          className="bg-slate-700 text-white font-bold p-2 rounded text-sm"
-          onClick={() => setFilterName("")}
+          className="bg-slate-700 transition-all text-white p-1 rounded text-sm border-2 border-slate-700"
+          onClick={() => updateFilter("")}
         >
           Clear
         </button>
@@ -42,9 +48,13 @@ function App() {
               }, [])
               .map((entry, index) => (
                 <button
-                  className="bg-slate-700 transition-all text-white font-bold p-2 rounded text-sm focus:bg-slate-200 focus:text-black focus:border-2 focus:border-slate-700 border-2 border-slate-700"
+                  className={
+                    active === index
+                      ? "bg-slate-100 transition-all text-black font-semibold p-1 rounded border-2 border-slate-300"
+                      : "bg-slate-700 transition-all text-white p-1 rounded text-sm border-2 border-slate-700"
+                  }
                   key={index}
-                  onClick={() => setFilterName(entry)}
+                  onClick={() => updateFilter(entry, index)}
                 >
                   {entry}
                 </button>
