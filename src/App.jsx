@@ -31,12 +31,13 @@ function App() {
         Public API List
       </h1>
 
-      <p className="pb-4 text-center mx-auto text-md">
+      <p className="pb-4 my-8 text-center mx-auto text-md">
         Please ⭐ this on{" "}
         <a
           href="https://github.com/MSAZ89/public-api-fetching"
           target="_blank"
           rel="noreferrer"
+          className="text-orange-400 hover:text-orange-300 transition-all bg-slate-900 p-2 rounded"
         >
           Github
         </a>
