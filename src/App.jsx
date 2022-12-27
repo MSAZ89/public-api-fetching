@@ -30,6 +30,18 @@ function App() {
       <h1 className="my-8 pb-4 text-center mx-auto text-2xl">
         Public API List
       </h1>
+
+      <p className="pb-4 text-center mx-auto text-md">
+        Please ⭐ this on{" "}
+        <a
+          href="https://github.com/MSAZ89/public-api-fetching"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
+      </p>
+
       <div className="flex flex-wrap gap-2 mb-8 justify-center items-center">
         {/*Filters*/}
         <>
