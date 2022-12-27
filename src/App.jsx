@@ -37,7 +37,7 @@ function App() {
           href="https://github.com/MSAZ89/public-api-fetching"
           target="_blank"
           rel="noreferrer"
-          className="text-orange-400 hover:text-orange-300 transition-all bg-slate-900 p-2 rounded"
+          className="text-white hover:text-orange-100 transition-all bg-slate-700 px-2 py-1 rounded text-sm"
         >
           Github
         </a>
